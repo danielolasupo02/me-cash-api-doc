@@ -1,3 +1,17 @@
+# Table of Contents
+1. [Base URL](#base-url)
+2. [Authentication](#authentication)
+3. [meCash Request Endpoints](#mecash-request-endpoints)
+    1. [POST /api/v1/payments](#apiv1payments)
+        1. [Sample Request](#sample-request)
+        2. [Parameter Descriptions](#parameter-descriptions)
+        3. [Sample Response](#sample-response)
+        4. [Field Descriptions](#field-descriptions)
+4. [Error Handling](#error-handling)
+    1. [Sample Error Response](#sample-error-response)
+
+
+
 # Getting Started With meCash API
 Welcome to the meCash API. The meCash Cross-Border Payment API allows developers to initiate international payments between a sender and a recipient.
 
