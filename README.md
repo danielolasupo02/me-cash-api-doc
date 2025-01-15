@@ -1,3 +1,9 @@
-# me-cash-api-doc
-API documentation for meCash, focused on enabling seamless integration for developers with a cross-border payment endpoint.
- test xhan
+# Getting Started With meCash API
+
+
+Welcome to the meCash API. The meCash Cross-Border Payment API allows developers to initiate international payments between a sender and a recipient.
+
+## Base URL
+
+Provide the base URL for your API.
+The base URL for our API is: https://dev.pay-cash.com
