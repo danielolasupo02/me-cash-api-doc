@@ -49,3 +49,30 @@ This endpoint allows you to initiate a cross-border payment between a sender and
 | `recipient.bankCode`    | `string`   | The recipient's bank code.                                    | Yes      |
 | `recipient.country`     | `string`   | The recipient's country. Use ISO 3166-1 alpha-3 country codes (e.g., USA, GBR). | Yes      |
 | `reference`             | `string`   | Unique transaction reference or invoice number.               | Yes      |
+
+#### Sample Response
+HTTP Response Code: `201 OK`
+```
+{
+  "transactionId": "TXN789456123",
+  "status": "SUCCESS",
+  "createdAt": "2025-01-12T10:15:30Z",
+  "amount": 100.00,
+  "currency": "USD",
+  "recipient": {
+    "name": "Jane Smith",
+    "country": "USA"
+  }
+}
+```
+#### Field Descriptions
+| Field                  | Type       | Description                                                      | Required |
+|-------------------------|------------|------------------------------------------------------------------|----------|
+| `transactionId`        | `string`   | Unique identifier for the transaction.                          | Yes      |
+| `status`               | `string`   | Status of the transaction. Possible values: `SUCCESS`, `FAILED`, `PENDING`. | Yes      |
+| `createdAt`            | `string`   | The date and time when the transaction was created, in ISO 8601 format. | Yes      |
+| `amount`               | `number`   | The transaction amount. Must be a positive value.               | Yes      |
+| `currency`             | `string`   | The currency of the transaction. Use ISO 4217 currency codes (e.g., USD, EUR). | Yes      |
+| `recipient`            | `object`   | Information about the recipient of the transaction.             | Yes      |
+| `recipient.name`       | `string`   | Full name of the recipient.                                      | Yes      |
+| `recipient.country`    | `string`   | The recipient's country. Use ISO 3166-1 alpha-3 country codes (e.g., USA, GBR). | Yes      |
