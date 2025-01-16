@@ -9,9 +9,6 @@
         4. [Field Descriptions](#field-descriptions)
 4. [Error Handling](#error-handling)
     1. [Sample Error Response](#sample-error-response)
-
-
-
 # Getting Started With meCash API
 Welcome to the meCash API. The meCash Cross-Border Payment API allows developers to initiate international payments between a sender and a recipient.
 
@@ -90,3 +87,26 @@ HTTP Response Code: `201 OK`
 | `recipient`            | `object`   | Information about the recipient of the transaction.             | Yes      |
 | `recipient.name`       | `string`   | Full name of the recipient.                                      | Yes      |
 | `recipient.country`    | `string`   | The recipient's country. Use ISO 3166-1 alpha-3 country codes (e.g., USA, GBR). | Yes      |
+
+## Error Handling
+Our API uses standard HTTP status codes to communicate the result of a request.
+
+### Sample Error Response
+**HTTP Response Code:** 400
+The response body may also contain an error object with additional information.
+
+```
+{
+  "error": "INVALID_REQUEST",
+  "message": "Invalid bank code for the recipient."
+}
+```
+
+The payCash API returns error codes and messages to help with troubleshooting. Below are common error codes and their explanations:
+
+| **Error Code**         | **HTTP Status** | **Message**                                | **Description**                                                                 |
+|-------------------------|-----------------|--------------------------------------------|---------------------------------------------------------------------------------|
+| **INVALID_REQUEST**     | 400             | "Invalid bank code for the recipient."     | Occurs when the provided bank code is invalid or unrecognized. Verify the bank code and retry. |
+| **UNAUTHORIZED**        | 401             | "Unauthorized access to the API."          | This error occurs when the API request lacks proper authentication. Ensure correct API keys are used. |
+| **INSUFFICIENT_FUNDS**  | 402             | "Insufficient funds for the transaction."  | The account doesn't have enough balance to complete the payment. Check account balance. |
+| **SERVER_ERROR**        | 500             | "Internal server error."                   | Indicates a server-side issue. Try again later or contact support for assistance. |
