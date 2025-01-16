@@ -12,8 +12,11 @@
 # Getting Started With meCash API
 Welcome to the meCash API. The meCash Cross-Border Payment API allows developers to initiate international payments between a sender and a recipient.
 
+
 ## Base URL
 The base URL for our API is: `https://api.prod.me-cash.com/api/v1/payments`
+
+
 
 ## Authentication
 Before using our API, you need to obtain an API key. Sign up on our dashboard to obtain your API key. Include the API key in the request headers as follows:
@@ -22,6 +25,8 @@ Before using our API, you need to obtain an API key. Sign up on our dashboard to
 |------------|------------|------------|
 | Authorization |Bearer token for authentication|`Bearer your_api_key`| 
 | Content-type | Specifies the media type of the request | `application/json` |
+
+
 
 ## meCash Request Endpoints
 ### /api/v1/payments [POST]
@@ -87,6 +92,8 @@ HTTP Response Code: `201 OK`
 | `recipient`            | `object`   | Information about the recipient of the transaction.             | Yes      |
 | `recipient.name`       | `string`   | Full name of the recipient.                                      | Yes      |
 | `recipient.country`    | `string`   | The recipient's country. Use ISO 3166-1 alpha-3 country codes (e.g., USA, GBR). | Yes      |
+
+
 
 ## Error Handling
 Our API uses standard HTTP status codes to communicate the result of a request.
