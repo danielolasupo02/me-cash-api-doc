@@ -13,7 +13,7 @@
 Welcome to the meCash API. The meCash Cross-Border Payment API allows developers to initiate international payments between a sender and a recipient.
 
 ## Base URL
-The base URL for our API is: `https://dev.pay-cash.com`
+The base URL for our API is: `https://api.prod.me-cash.com/api/v1/payments`
 
 ## Authentication
 Before using our API, you need to obtain an API key. Sign up on our dashboard to obtain your API key. Include the API key in the request headers as follows:
